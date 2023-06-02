@@ -1,0 +1,66 @@
+<table style="width:100%; max-width:700px;" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="center">
+      <img style="width: 100px;height: auto;" src="https://iili.io/mlL27s.png"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="
+      width: 100%;
+      background: #F68634;
+      text-align: center;
+      max-width: 700px;
+      ">
+        <h1
+          style="
+          font-size: 30px;
+          color: #ffffff;
+          padding:20px 0 20px 0;
+        ">Nova solicitação de filiação.</h1>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <h2> O usuário {{ name }} acabou de solicitar filiação ao Sindicato e estes foram os dados informados:</h2>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+    <h3>Nome: {{name}}</h3>
+    <h3>Sexo: {{genre}}</h3>
+    <h3>Data de Nascimento: {{birthDate}}</h3>
+    <h3>Estado Civil: {{maritalStatus}}</h3>
+    <h3>Nome da empresa: {{companyName}}</h3>
+    <h3>Cargo ou função: {{officeOrFunction}}</h3>
+    <h3>RG: {{rg}}</h3>
+    <h3>CPF: {{cpf}}</h3>
+    <br>
+    <h3>Endereço: {{address}}</h3>
+    <h3>Número: {{number}}</h3>
+    <h3>Bairro: {{district}}</h3>
+    <h3>CEP: {{cep}}</h3>
+    <h3>Complemento: {{complement || ''}}</h3>
+    <h3>Cidade: {{city}}</h3>
+    <h3>Estado: {{uf}}</h3>
+    <h3>Fone residencial: {{phone || ''}}</h3>
+    <h3>Celular: {{cellphone}}</h3>
+    @if(dependents.length)
+      @each(dependent in dependents)
+        <h3>
+          Dependente- <br>
+          Nome: {{dependent.name || ''}}<br>
+          Parentesco: {{dependent.related || ''}}<br>
+          Data de Nascimento: {{dependent.birthDate || ''}}<br>
+        </h3>
+      @endeach
+    @endif
+
+    </td>
+  <tr>
+    <td align="center" style="padding-top: 30px;">
+      <img style="width: 55px;height: auto;" src="https://iili.io/m1uaLb.png"/>
+    </td>
+  </tr>
+</table>
